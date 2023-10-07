@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/wocker-docs/static/css/main.e2ea59a5.css",
+    "main.js": "/wocker-docs/static/js/main.6c97e7c4.js",
+    "static/js/883.68edb697.chunk.js": "/wocker-docs/static/js/883.68edb697.chunk.js",
+    "static/js/970.f62ce152.chunk.js": "/wocker-docs/static/js/970.f62ce152.chunk.js",
+    "index.html": "/wocker-docs/index.html",
+    "main.e2ea59a5.css.map": "/wocker-docs/static/css/main.e2ea59a5.css.map",
+    "main.6c97e7c4.js.map": "/wocker-docs/static/js/main.6c97e7c4.js.map",
+    "883.68edb697.chunk.js.map": "/wocker-docs/static/js/883.68edb697.chunk.js.map",
+    "970.f62ce152.chunk.js.map": "/wocker-docs/static/js/970.f62ce152.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2ea59a5.css",
+    "static/js/main.6c97e7c4.js"
+  ]
+}
