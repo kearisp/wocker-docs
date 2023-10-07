@@ -1,0 +1,22 @@
+.main-menu {
+
+}
+
+.main-menu-item {
+    position: relative;
+
+    .main-menu--child &:before {
+        position: absolute;
+        left: 2.5px;
+        content: "";
+        background: var(--mui-palette-text-primary);
+        width: 1px;
+        height: 100%;
+    }
+
+    &--active {
+        .MuiTypography-root {
+            font-weight: bold;
+        }
+    }
+}

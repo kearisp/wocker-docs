@@ -1,0 +1,15 @@
+{
+    "language": {
+        "en": "Англійська",
+        "ua": "Українська"
+    },
+    "menu": {
+        "config": "Конфігурація",
+        "get-started": "Початок",
+        "initialization": "Ініціалізація",
+        "installation": "Інсталювання",
+        "overview": "Огляд",
+        "plugins": "Плагіни",
+        "projects": "Проєкти"
+    }
+}

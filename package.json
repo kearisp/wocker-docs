@@ -1,0 +1,62 @@
+{
+    "name": "wocker-docs",
+    "version": "1.0.0",
+    "author": "Kris Papercut <krispcut@gmail.com>",
+    "description": "Docs for @wocker",
+    "license": "MIT",
+    "main": "index.js",
+    "type": "module",
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "postbuild": "cp build/index.html build/404.html",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@mui/icons-material": "^5.14.11",
+        "@mui/material": "^5.14.10",
+        "i18next": "^23.6.0",
+        "i18next-http-backend": "^2.3.0",
+        "markdown-to-jsx": "^7.3.2",
+        "path-browserify": "^1.0.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-i18next": "^13.3.1",
+        "react-router-dom": "^6.16.0",
+        "react-scripts": "^5.0.1",
+        "sass": "^1.68.0",
+        "typescript": "^4.9.5"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "@types/jest": "^29.5.5",
+        "@types/node": "^20.6.5",
+        "@types/path-browserify": "^1.0.0",
+        "@types/react": "^18.2.22",
+        "@types/react-dom": "^18.2.7"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "language": {
+        "en": "English",
+        "ua": "Ukrainian"
+    },
+    "menu": {
+        "config": "Config",
+        "get-started": "Get Started",
+        "initialization": "Initialization",
+        "installation": "Installation",
+        "mariadb": "Mariadb",
+        "overview": "Overview",
+        "plugins": "Plugins",
+        "projects": "Projects",
+        "proxy": "Proxy"
+    }
+}
