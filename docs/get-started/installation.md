@@ -5,7 +5,7 @@ title: Installation
 
 # Installation
 
-Install Jest using your favorite package manager:
+Install Wocker using your favorite package manager:
 
 <codeblock storageKey="package-manager">
 
