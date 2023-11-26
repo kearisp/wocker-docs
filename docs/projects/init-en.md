@@ -1,6 +1,6 @@
-# 
+# Project initialization
 
-## Creating project
+## Створення проєкту
 
 ```shell
 cd ~/project-dir

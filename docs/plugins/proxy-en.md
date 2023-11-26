@@ -1,13 +1,13 @@
 # Proxy
 
 
-Start proxy
+## Start proxy
 
 ```shell
 ws proxy:start
 ```
 
-Stop proxy
+## Stop proxy
 
 ```shell
 ws proxy:stop

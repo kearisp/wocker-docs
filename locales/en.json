@@ -11,7 +11,9 @@
         "mariadb": "Mariadb",
         "overview": "Overview",
         "plugins": "Plugins",
+        "project-management": "Management",
         "projects": "Projects",
-        "proxy": "Proxy"
+        "proxy": "Proxy",
+        "serveo": "Serveo"
     }
 }

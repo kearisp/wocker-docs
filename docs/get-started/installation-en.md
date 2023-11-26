@@ -1,8 +1,3 @@
----
-layout: null
-title: Installation
----
-
 # Installation
 
 Install Wocker using your favorite package manager:
@@ -10,28 +5,23 @@ Install Wocker using your favorite package manager:
 <codeblock storageKey="package-manager">
 
 ```bash title="npm"
-npm install -g @wocker/cli
+npm install -g @wocker/ws
 ```
 
 ```bash title="yarn"
-yarn global add @wocker/cli
+yarn global add @wocker/ws
 ```
 
 ```bash title="pnpm"
-pnpm add -g @wocker/cli
+pnpm add -g @wocker/ws
 ```
 
 </codeblock>
 
 ## Project initialisation
 
-```shell
-cd /project-dir
-```
 
-```shell
-ws init
-```
+[``ws init``](/project/init)
 
 
 

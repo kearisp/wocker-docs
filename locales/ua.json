@@ -5,11 +5,12 @@
     },
     "menu": {
         "config": "Конфігурація",
-        "get-started": "Розпочати",
+        "get-started": "Початок",
         "initialization": "Ініціалізація",
         "installation": "Інсталювання",
         "overview": "Огляд",
         "plugins": "Плагіни",
+        "project-management": "Керування",
         "projects": "Проєкти"
     }
 }
