@@ -27,6 +27,9 @@ const ThemeProvider: React.FC<Props> = (props) => {
                 },
                 h2: {
                     fontSize: "1.5em"
+                },
+                h3: {
+                    fontSize: "1.3em"
                 }
             }
         });

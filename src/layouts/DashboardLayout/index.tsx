@@ -84,6 +84,8 @@ const DashboardLayout: React.FC<Props> = (props) => {
                         Wocker
                     </Typography>
 
+                    <ThemeToggle />
+
                     <Select
                       variant="outlined"
                       size="small"
@@ -92,8 +94,6 @@ const DashboardLayout: React.FC<Props> = (props) => {
                         <MenuItem value="ua">Ukrainian</MenuItem>
                         <MenuItem value="en">English</MenuItem>
                     </Select>
-
-                    <ThemeToggle />
                 </Toolbar>
             </AppBar>
 

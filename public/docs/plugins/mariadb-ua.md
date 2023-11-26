@@ -1,34 +1,58 @@
-# Mariadb
+# MariaDB
 
-## Installation
+## Інсталяція
 
-To access the following services within the workspace, please add the following entries to your hosts file:
+Наступна команда встановлює плагін MariaDB.
+
+```shell
+ws plugin:add mariadb
+```
+
+Після інсталяції необхідно додати наступні рядки до файлу **hosts**:
 
 ```text
-127.0.0.1 maildev.workspace
+127.0.0.1 mariadb.workspace
 127.0.0.1 dbadmin-mariadb.workspace
 ```
 
 
-## Start Mariadb
+## Запуск MariaDB
 
 ```shell
-ws maridb:start
+ws mariadb:start
 ```
 
-## Backup db
 
-The `mariadb:backup` command is used to create a backup of a MariaDB database.
+## Створення бекапу MariaDB
+
+Бекап у розумінні плагіну це ніщо інше як просто результат роботи команди `mysqldump`, але файл з дампом буде збережено у директорію плагіну для подальшої можливості відновлення.
+Команду `mariadb:backup` можна використовувати для створення бекапу бази даних MariaDB.
 
 ```shell
-ws mariadb:backup [database]
+ws mariadb:backup [database] [filename]
 ```
 
-### Backup Location
+_filename_ - назва файлу під яким буде створено дамп бд, якщо не вказувати назву, то дамп назва файлу буде вказана автоматично на основі поточного часу:
+- ``yyyy-MM-dd HH-mm``.
 
-The backup file will be saved in the following directory:
+_database_ - назва бази даних для якої необхідно створити бекап.
 
-> $WS_DIR/plugins/mariadb/dump/**\[dbname]**/yyyy-MM-dd HH-mm.sql
+При пропуску назви бд інтерфейс командного рядка запитає назву бд:
+
+```shell
+$ ws mariadb:backup
+? Database:  (Use arrow keys)
+❯ example_database1
+  example_database2
+  example_database3
+```
+
+
+### Розташування бекапів
+
+Файли з бекапами будуть збережені у наступну директорію:
+
+> ${WS_DIR}/plugins/mariadb/dump/**\[dbname]**/**\[filename]**.sql
 
 
 ### Delete backup
@@ -36,7 +60,7 @@ The backup file will be saved in the following directory:
 The `mariadb:delete-backup` command will remove file from `$WS_DIR` directory.
 
 ```shell
-ws mariadb:delete-backup [database] [filename]
+ws mariadb:backup -d [database] [filename]
 ```
 
 ## Dump

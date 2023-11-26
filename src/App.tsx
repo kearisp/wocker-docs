@@ -26,10 +26,12 @@ const App: React.FC = () => {
                             <Route path={ROUTES.home} element={<HomePage />} />
                             <Route path={ROUTES.installation} element={<MarkdownScreen path="get-started/installation" />} />
                             <Route path={ROUTES.overview} element={<MarkdownScreen path="get-started/overview" />} />
-                            <Route path={ROUTES.projectInit} element={<MarkdownScreen path="projects/init.md" />} />
-                            <Route path={ROUTES.projectConfig} element={<MarkdownScreen path="projects/config.md" />} />
-                            <Route path={ROUTES.pluginsProxy} element={<MarkdownScreen path="plugins/proxy.md" />} />
-                            <Route path={ROUTES.pluginsMariadb} element={<MarkdownScreen path="plugins/mariadb.md" />} />
+                            <Route path={ROUTES.projectInit} element={<MarkdownScreen path="projects/init" />} />
+                            <Route path={ROUTES.projectManagement} element={<MarkdownScreen path="projects/management" />} />
+                            <Route path={ROUTES.projectConfig} element={<MarkdownScreen path="projects/config" />} />
+                            <Route path={ROUTES.pluginsProxy} element={<MarkdownScreen path="plugins/proxy" />} />
+                            <Route path={ROUTES.pluginsMariadb} element={<MarkdownScreen path="plugins/mariadb" />} />
+                            <Route path={ROUTES.pluginsServeo} element={<MarkdownScreen path="plugins/serveo" />} />
                         </Route>
                     </Routes>
                 </BrowserRouter>

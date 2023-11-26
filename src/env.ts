@@ -11,8 +11,11 @@ export const ROUTES = {
     usage: "/get-started/usage",
     projectInit: "/project/init",
     projectConfig: "/project/config",
+    projectStart: "/project/start",
+    projectManagement: "/project/management",
     pluginsProxy: "/plugins/proxy",
     pluginsMariadb: "/plugins/mariadb",
+    pluginsServeo: "/plugins/serveo",
 };
 
 type MenuItem = {
@@ -45,6 +48,10 @@ export const MENU: MenuItem[] = [
                 to: ROUTES.projectInit
             },
             {
+                label: "menu.project-management",
+                to: ROUTES.projectManagement
+            },
+            {
                 label: "menu.config",
                 to: ROUTES.projectConfig
             }
@@ -61,6 +68,10 @@ export const MENU: MenuItem[] = [
             {
                 label: "menu.mariadb",
                 to: ROUTES.pluginsMariadb
+            },
+            {
+                label: "menu.serveo",
+                to: ROUTES.pluginsServeo
             }
         ]
     }

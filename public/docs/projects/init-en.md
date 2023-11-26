@@ -1,15 +1,10 @@
-# 
+# Project initialization
 
 ## Створення проєкту
-
-Спочатку, потрібно перейти у відповідну директорію проєкту:
 
 ```shell
 cd ~/project-dir
 ```
-
-
-
 
 ```shell
 ws init
