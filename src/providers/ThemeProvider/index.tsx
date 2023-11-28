@@ -2,11 +2,13 @@ import React, {useMemo, PropsWithChildren} from "react";
 import {
     CssBaseline,
     StyledEngineProvider,
-    ThemeProvider as MuiThemeProvider,
-    createTheme,
-    Experimental_CssVarsProvider as CssVarsProvider
+    // ThemeProvider as MuiThemeProvider,
+    Experimental_CssVarsProvider as CssVarsProvider,
+    experimental_extendTheme as extendTheme
 } from "@mui/material";
-// import {CssVars} from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
+import {generateTheme} from "./generateTheme";
 
 
 type Props = PropsWithChildren;
@@ -16,33 +18,28 @@ const ThemeProvider: React.FC<Props> = (props) => {
         children
     } = props;
 
-    const theme = useMemo(() => {
-        return createTheme({
-            palette: {
-                mode: "dark"
-            },
-            typography: {
-                h1: {
-                    fontSize: "2em"
-                },
-                h2: {
-                    fontSize: "1.5em"
-                },
-                h3: {
-                    fontSize: "1.3em"
-                }
+    const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+
+    const eTheme = useMemo(() => {
+        return extendTheme({
+            cssVarPrefix: "wocker",
+            colorSchemes: {
+                light: generateTheme("light"),
+                dark: generateTheme("dark")
             }
         });
     }, []);
 
     return (
         <StyledEngineProvider injectFirst>
-            <CssVarsProvider>
-                <MuiThemeProvider theme={theme}>
+            <CssVarsProvider
+              defaultColorScheme={prefersDarkMode ? "dark" : "light"}
+              theme={eTheme}>
+                {/*<MuiThemeProvider theme={theme}>*/}
                     <CssBaseline />
 
                     {children}
-                </MuiThemeProvider>
+                {/*</MuiThemeProvider>*/}
             </CssVarsProvider>
         </StyledEngineProvider>
     );

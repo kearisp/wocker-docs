@@ -64,10 +64,10 @@ const MainMenu: React.FC<Props> = (props) => {
 
     return (
         <List
-          className={`main-menu ${modifications}`}
           sx={{
             pl: isChild ? 4 : undefined
           }}
+          className={`main-menu ${modifications}`}
           disablePadding={isChild}>
             {items.map((item, index) => {
                 const {
@@ -83,8 +83,8 @@ const MainMenu: React.FC<Props> = (props) => {
                 return (
                     <React.Fragment key={index}>
                         <ListItemButton
-                          className={`main-menu-item ${modifications}`}
                           component={Link}
+                          className={`main-menu-item ${modifications}`}
                           to={to}
                           onClick={(e) => {
                             if(children && children.length > 0) {

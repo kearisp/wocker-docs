@@ -1,10 +1,18 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useMemo, useEffect} from "react";
 import * as Path from "path-browserify";
 import {useTranslation} from "react-i18next";
 
 import {DOCS_URL} from "../../env";
+import {titleToId} from "../../utils";
 import {Markdown} from "../Markdown";
+import {TableOfContents} from "../TableOfContents";
 
+
+type Heading = {
+    id: string;
+    title: string;
+    children?: Heading[];
+};
 
 type Props = {
     path: string;
@@ -17,6 +25,38 @@ const MarkdownScreen: React.FC<Props> = (props) => {
 
     const [text, setText] = useState("");
     const [, i18n] = useTranslation();
+
+    const headings = useMemo(() => {
+        const headings: Heading[] = [];
+        const lastLevelMap: any = {};
+
+        (text.match(/#{1,6}\s(.*?)(?=\n)/g) || []).forEach((text: string) => {
+            const [, levelMark, title] = /(#{1,6})\s(.*)/.exec(text) || [];
+            const level = levelMark.length;
+
+            const header: Heading = {
+                id: titleToId(title),
+                title,
+                children: []
+            };
+
+            if(lastLevelMap[level - 1]) {
+                lastLevelMap[level - 1].children.push(header);
+            }
+            else {
+                headings.push(header);
+            }
+
+            lastLevelMap[level] = header;
+        });
+
+        if(headings.length === 1) {
+            return headings[0].children || [];
+        }
+
+        return headings;
+    }, [text]);
+
 
     useEffect(() => {
         (async () => {
@@ -39,8 +79,23 @@ const MarkdownScreen: React.FC<Props> = (props) => {
     }, [path, i18n.language]);
 
     return (
-        <Markdown
-          content={text} />
+        <div style={{display: "flex"}}>
+            <div
+              style={{flex: 1}}>
+                <Markdown
+                  content={text} />
+            </div>
+
+            {headings.length > 0 && (
+                <div
+                  style={{
+                    flexBasis: "200px",
+                    paddingTop: "20px"
+                  }}>
+                    <TableOfContents headings={headings} />
+                </div>
+            )}
+        </div>
     );
 };
 

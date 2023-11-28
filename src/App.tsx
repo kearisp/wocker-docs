@@ -32,6 +32,7 @@ const App: React.FC = () => {
                             <Route path={ROUTES.pluginsProxy} element={<MarkdownScreen path="plugins/proxy" />} />
                             <Route path={ROUTES.pluginsMariadb} element={<MarkdownScreen path="plugins/mariadb" />} />
                             <Route path={ROUTES.pluginsServeo} element={<MarkdownScreen path="plugins/serveo" />} />
+                            <Route path={ROUTES.pluginsCustom} element={<MarkdownScreen path="plugins/custom" />} />
                         </Route>
                     </Routes>
                 </BrowserRouter>

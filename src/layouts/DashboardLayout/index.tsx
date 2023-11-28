@@ -99,14 +99,18 @@ const DashboardLayout: React.FC<Props> = (props) => {
 
             <Box sx={theme.mixins.toolbar} />
 
-            <Box display="flex">
+            <Box
+              sx={{
+                "--wocker-header-height": "64px"
+              }}
+              display="flex">
                 {!isMobile && (
                     <Box sx={{width: 220, flexBasis: 220, minWidth: 220}}>
                         <Sidebar />
                     </Box>
                 )}
 
-                <Box>
+                <Box flex={1}>
                     {children}
                 </Box>
             </Box>

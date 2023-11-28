@@ -1,8 +1,8 @@
 import React, {useMemo} from "react";
 import MarkdownJSX from "markdown-to-jsx";
-import {Typography} from "@mui/material";
 
-import {A, Code, CodeBlock} from "./blocks";
+import {titleToId} from "../../utils";
+import {A, Code, CodeBlock, H} from "./blocks";
 
 
 const headerRegExp = /---[\r\n]([\s\S]*)[\r\n]---/;
@@ -23,35 +23,30 @@ const Markdown: React.FC<Props> = (props) => {
     return (
         <MarkdownJSX
           options={{
+            slugify: titleToId,
             overrides: {
                 h1: {
-                    component: Typography,
+                    component: H,
                     props: {
-                        sx: {
-                            mt: 3,
-                            mb: 3
-                        },
                         variant: "h1"
                     }
                 },
                 h2: {
-                    component: Typography,
+                    component: H,
                     props: {
-                        sx: {
-                            mt: 3,
-                            mb: 3
-                        },
                         variant: "h2"
                     }
                 },
                 h3: {
-                    component: Typography,
+                    component: H,
                     props: {
-                        sx: {
-                            mt: 3,
-                            mb: 3
-                        },
                         variant: "h3"
+                    }
+                },
+                h4: {
+                    component: H,
+                    props: {
+                        variant: "h4"
                     }
                 },
                 code: {

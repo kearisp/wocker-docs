@@ -9,7 +9,7 @@
 ws config
 ```
 
-## 
+## One
 
 ```shell
 ws config:get KEY
