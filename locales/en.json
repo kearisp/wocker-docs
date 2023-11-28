@@ -5,6 +5,7 @@
     },
     "menu": {
         "config": "Config",
+        "custom-plugin": "Custom",
         "get-started": "Get Started",
         "initialization": "Initialization",
         "installation": "Installation",

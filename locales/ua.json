@@ -5,6 +5,7 @@
     },
     "menu": {
         "config": "Конфігурація",
+        "custom-plugin": "Створення",
         "get-started": "Початок",
         "initialization": "Ініціалізація",
         "installation": "Інсталювання",
