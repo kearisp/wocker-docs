@@ -13,6 +13,7 @@ export const ROUTES = {
     projectConfig: "/project/config",
     projectStart: "/project/start",
     projectManagement: "/project/management",
+    projectDomains: "/project/domains",
     pluginsCustom: "/plugins/custom",
     pluginsProxy: "/plugins/proxy",
     pluginsMariadb: "/plugins/mariadb",
@@ -55,6 +56,10 @@ export const MENU: MenuItem[] = [
             {
                 label: "menu.config",
                 to: ROUTES.projectConfig
+            },
+            {
+                label: "menu.domains",
+                to: ROUTES.projectDomains
             }
         ]
     },
