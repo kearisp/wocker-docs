@@ -6,6 +6,7 @@
     "menu": {
         "config": "Config",
         "custom-plugin": "Custom",
+        "domains": "Domains",
         "get-started": "Get Started",
         "initialization": "Initialization",
         "installation": "Installation",
