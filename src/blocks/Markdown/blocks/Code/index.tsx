@@ -1,9 +1,10 @@
 import React, {useMemo, useContext, useEffect} from "react";
-import Highlighter from "react-syntax-highlighter";
+import SyntaxHighlighter from "react-syntax-highlighter";
 import {docco, idea, darcula} from "react-syntax-highlighter/dist/esm/styles/hljs";
 import {useColorScheme} from "@mui/material/styles";
 
 import {CodeBlockContext} from "../CodeBlock";
+import {PreConsumer} from "../Pre";
 
 
 type Props = {
@@ -35,14 +36,15 @@ const Code: React.FC<Props> = (props) => {
     }, [title]); // eslint-disable-line
 
     return (
-        <Highlighter
+        <SyntaxHighlighter
+          PreTag={PreConsumer}
           language={lang}
           style={mode === "dark" ? darcula : {
             ...idea,
             hljs: docco.hljs
           }}>
             {children}
-        </Highlighter>
+        </SyntaxHighlighter>
     );
 };
 

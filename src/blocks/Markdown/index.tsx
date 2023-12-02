@@ -1,8 +1,9 @@
 import React, {useMemo} from "react";
 import MarkdownJSX from "markdown-to-jsx";
+import Typography from "@mui/material/Typography";
 
 import {titleToId} from "../../utils";
-import {A, Code, CodeBlock, H} from "./blocks";
+import {A, Blockquote, Code, CodeBlock, H, Pre} from "./blocks";
 
 
 const headerRegExp = /---[\r\n]([\s\S]*)[\r\n]---/;
@@ -48,6 +49,22 @@ const Markdown: React.FC<Props> = (props) => {
                     props: {
                         variant: "h4"
                     }
+                },
+                p: {
+                    component: Typography,
+                    props: {
+                        sx: {
+                            mt: 1,
+                            mb: 1
+                        },
+                        variant: "body1"
+                    }
+                },
+                blockquote: {
+                    component: Blockquote
+                },
+                pre: {
+                    component: Pre
                 },
                 code: {
                     component: Code
