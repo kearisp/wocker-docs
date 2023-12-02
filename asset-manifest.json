@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/wocker-docs/static/css/main.703dfa8c.css",
-    "main.js": "/wocker-docs/static/js/main.9a2a3742.js",
-    "static/js/883.97780e91.chunk.js": "/wocker-docs/static/js/883.97780e91.chunk.js",
-    "static/js/970.7b0d547b.chunk.js": "/wocker-docs/static/js/970.7b0d547b.chunk.js",
+    "main.css": "/wocker-docs/static/css/main.4324cb40.css",
+    "main.js": "/wocker-docs/static/js/main.c17b02e2.js",
+    "static/js/883.343d5ffe.chunk.js": "/wocker-docs/static/js/883.343d5ffe.chunk.js",
+    "static/js/970.a5321252.chunk.js": "/wocker-docs/static/js/970.a5321252.chunk.js",
     "index.html": "/wocker-docs/index.html",
     "static/media/getFetch.cjs": "/wocker-docs/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.703dfa8c.css.map": "/wocker-docs/static/css/main.703dfa8c.css.map",
-    "main.9a2a3742.js.map": "/wocker-docs/static/js/main.9a2a3742.js.map",
-    "883.97780e91.chunk.js.map": "/wocker-docs/static/js/883.97780e91.chunk.js.map",
-    "970.7b0d547b.chunk.js.map": "/wocker-docs/static/js/970.7b0d547b.chunk.js.map"
+    "main.4324cb40.css.map": "/wocker-docs/static/css/main.4324cb40.css.map",
+    "main.c17b02e2.js.map": "/wocker-docs/static/js/main.c17b02e2.js.map",
+    "883.343d5ffe.chunk.js.map": "/wocker-docs/static/js/883.343d5ffe.chunk.js.map",
+    "970.a5321252.chunk.js.map": "/wocker-docs/static/js/970.a5321252.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.703dfa8c.css",
-    "static/js/main.9a2a3742.js"
+    "static/css/main.4324cb40.css",
+    "static/js/main.c17b02e2.js"
   ]
 }
