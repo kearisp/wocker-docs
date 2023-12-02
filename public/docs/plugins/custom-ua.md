@@ -1,6 +1,12 @@
 # Створення плагіну
 
 
+```shell
+npm install @wocker/core
+```
+
+## index.ts
+
 ```typescript
 import {
     Injectable,
@@ -30,3 +36,8 @@ export default class CustomPlugin extends Plugin {
     }
 }
 ```
+
+
+## Example
+
+[wocker-test-plugin](https://github.com/kearisp/wocker-test-plugin)
