@@ -4,9 +4,11 @@
         "ua": "Ukrainian"
     },
     "menu": {
+        "build-args": "Build Args",
         "config": "Config",
         "custom-plugin": "Custom",
         "domains": "Domains",
+        "env": "Environment",
         "get-started": "Get Started",
         "initialization": "Initialization",
         "installation": "Installation",
