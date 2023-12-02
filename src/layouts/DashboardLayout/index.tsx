@@ -38,12 +38,14 @@ const DashboardLayout: React.FC<Props> = (props) => {
         setOpen((open) => !open);
     }, []);
 
-    const handleChangeLanguage = useCallback((e: SelectChangeEvent) => {
+    const handleChangeLanguage = useCallback(async (e: SelectChangeEvent) => {
         if(!e.target) {
             return;
         }
 
-        i18n.changeLanguage(e.target.value);
+        await i18n.changeLanguage(e.target.value);
+
+        localStorage.setItem("lang", e.target.value);
     }, [i18n]);
 
     return (

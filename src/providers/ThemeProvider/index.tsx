@@ -2,7 +2,6 @@ import React, {useMemo, PropsWithChildren} from "react";
 import {
     CssBaseline,
     StyledEngineProvider,
-    // ThemeProvider as MuiThemeProvider,
     Experimental_CssVarsProvider as CssVarsProvider,
     experimental_extendTheme as extendTheme
 } from "@mui/material";
@@ -33,13 +32,14 @@ const ThemeProvider: React.FC<Props> = (props) => {
     return (
         <StyledEngineProvider injectFirst>
             <CssVarsProvider
-              defaultColorScheme={prefersDarkMode ? "dark" : "light"}
+              modeStorageKey="mode"
+              colorSchemeStorageKey="color-scheme"
+              attribute="data-color-scheme"
+              defaultMode={prefersDarkMode ? "dark" : "light"}
               theme={eTheme}>
-                {/*<MuiThemeProvider theme={theme}>*/}
-                    <CssBaseline />
+                <CssBaseline />
 
-                    {children}
-                {/*</MuiThemeProvider>*/}
+                {children}
             </CssVarsProvider>
         </StyledEngineProvider>
     );

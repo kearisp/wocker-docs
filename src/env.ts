@@ -10,10 +10,11 @@ export const ROUTES = {
     installation: "/get-started/installation",
     usage: "/get-started/usage",
     projectInit: "/project/init",
-    projectConfig: "/project/config",
     projectStart: "/project/start",
     projectManagement: "/project/management",
     projectDomains: "/project/domains",
+    configEnv: "/config/env",
+    configBuildArgs: "/config/build-args",
     pluginsCustom: "/plugins/custom",
     pluginsProxy: "/plugins/proxy",
     pluginsMariadb: "/plugins/mariadb",
@@ -54,8 +55,12 @@ export const MENU: MenuItem[] = [
                 to: ROUTES.projectManagement
             },
             {
-                label: "menu.config",
-                to: ROUTES.projectConfig
+                label: "menu.build-args",
+                to: ROUTES.configBuildArgs
+            },
+            {
+                label: "menu.env",
+                to: ROUTES.configEnv
             },
             {
                 label: "menu.domains",
