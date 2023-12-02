@@ -13,8 +13,8 @@ export const ROUTES = {
     projectStart: "/project/start",
     projectManagement: "/project/management",
     projectDomains: "/project/domains",
-    configEnv: "/config/env",
-    configBuildArgs: "/config/build-args",
+    configEnv: "/project/env",
+    buildArgs: "/project/build-args",
     pluginsCustom: "/plugins/custom",
     pluginsProxy: "/plugins/proxy",
     pluginsMariadb: "/plugins/mariadb",
@@ -56,7 +56,7 @@ export const MENU: MenuItem[] = [
             },
             {
                 label: "menu.build-args",
-                to: ROUTES.configBuildArgs
+                to: ROUTES.buildArgs
             },
             {
                 label: "menu.env",

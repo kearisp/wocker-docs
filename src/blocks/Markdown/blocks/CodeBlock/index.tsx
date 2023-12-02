@@ -1,6 +1,9 @@
 import React, {useState, useCallback, createContext, Children, PropsWithChildren} from "react";
-import {Tabs, Tab} from "@mui/material";
-
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Card from "@mui/material/Card";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 
 
 const Context = createContext<{
@@ -38,14 +41,23 @@ const CodeBlock: React.FC<Props> = (props) => {
     }, []);
 
     return (
-        <React.Fragment>
-            <Tabs value={activeTab} onChange={(e, value) => setActiveTab(value)}>
+        <Card variant="outlined">
+            <Tabs
+              variant="standard"
+              value={activeTab}
+              onChange={(e, value) => setActiveTab(value)}>
                 {Children.map(children, (child, index) => {
                     return (
-                        <Tab label={mapTitles[index] || ""} />
+                        <Tab
+                          sx={{
+                            textTransform: "none"
+                          }}
+                          label={mapTitles[index] || ""} />
                     );
                 })}
             </Tabs>
+
+            <Divider />
 
             {Children.map(children, (child, index) => {
                 return (
@@ -54,13 +66,20 @@ const CodeBlock: React.FC<Props> = (props) => {
                         register: (title: string) => handleRegisterTab(title, index),
                         unregister: () => handleUnregisterTab(index)
                       }}>
-                        <div style={{display: activeTab === index ? "" : "none"}}>
+                        <Box
+                          sx={{
+                            display: activeTab === index ? "" : "none",
+                            "& > pre": {
+                                margin: 0,
+                                background: "none !important"
+                            }
+                          }}>
                             {child}
-                        </div>
+                        </Box>
                     </Context.Provider>
                 );
             })}
-        </React.Fragment>
+        </Card>
     );
 };
 

@@ -1,11 +1,8 @@
-import React, {useState, useContext, useEffect, createContext, PropsWithChildren} from "react";
+import React, {useState, PropsWithChildren} from "react";
 
+import {PreConsumer} from "./PreConsumer";
+import {PreContext} from "./PreContext";
 
-const Context = createContext<{
-    setProps: (props: any) => void;
-}>({
-    setProps() {}
-});
 
 type Props = PropsWithChildren<{
     className?: string;
@@ -20,8 +17,9 @@ const Pre: React.FC<Props> = (props) => {
     const [cProps, setCProps] = useState({});
 
     return (
-        <Context.Provider
+        <PreContext.Provider
           value={{
+            hasPre: true,
             setProps: setCProps
           }}>
             <pre
@@ -29,33 +27,13 @@ const Pre: React.FC<Props> = (props) => {
               {...cProps}>
                 {children}
             </pre>
-        </Context.Provider>
-    );
-};
-
-const PreConsumer: React.FC<PropsWithChildren> = (props) => {
-    const {
-        children,
-        ...rest
-    } = props;
-
-    const {setProps} = useContext(Context);
-
-    useEffect(() => {
-        setProps(rest);
-
-        return () => setProps({});
-    }, [setProps, JSON.stringify(rest)]); // eslint-disable-line
-
-    return (
-        <React.Fragment>
-            {children}
-        </React.Fragment>
+        </PreContext.Provider>
     );
 };
 
 
 export {
     Pre,
-    PreConsumer
+    PreConsumer,
+    PreContext
 };
